@@ -49,6 +49,10 @@ void FPSCounter::updateFPS(sf::Time deltaTime)
 
 	if (updateTime.asSeconds() >= 0.5)
 	{
+		if (BaseRunner::getInstance()->getFPS() > 60)
+		{
+			BaseRunner::getInstance()->setFPS(60);
+		}
 		statsText->setString("FPS: " + std::to_string((int)BaseRunner::getInstance()->getFPS()));
 		updateTime = sf::seconds(0);
 	}
