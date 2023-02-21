@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HO2-Background_Asset_Loader
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HO3-A_Barage_of_Threads", "HO-A_Barage_of_Threads\HO-A_Barage_of_Threads.vcxproj", "{9561BF9A-3F76-4727-A7C3-CC8E4B2CC5DE}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HO4-Batch_Asset_Loader", "HO-Batch_Asset_Loader\HO-Batch_Asset_Loader.vcxproj", "{F4118395-A660-4E7C-9836-E0A9416092D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,14 @@ Global
 		{9561BF9A-3F76-4727-A7C3-CC8E4B2CC5DE}.Release|x64.Build.0 = Release|x64
 		{9561BF9A-3F76-4727-A7C3-CC8E4B2CC5DE}.Release|x86.ActiveCfg = Release|Win32
 		{9561BF9A-3F76-4727-A7C3-CC8E4B2CC5DE}.Release|x86.Build.0 = Release|Win32
+		{F4118395-A660-4E7C-9836-E0A9416092D0}.Debug|x64.ActiveCfg = Debug|x64
+		{F4118395-A660-4E7C-9836-E0A9416092D0}.Debug|x64.Build.0 = Debug|x64
+		{F4118395-A660-4E7C-9836-E0A9416092D0}.Debug|x86.ActiveCfg = Debug|Win32
+		{F4118395-A660-4E7C-9836-E0A9416092D0}.Debug|x86.Build.0 = Debug|Win32
+		{F4118395-A660-4E7C-9836-E0A9416092D0}.Release|x64.ActiveCfg = Release|x64
+		{F4118395-A660-4E7C-9836-E0A9416092D0}.Release|x64.Build.0 = Release|x64
+		{F4118395-A660-4E7C-9836-E0A9416092D0}.Release|x86.ActiveCfg = Release|Win32
+		{F4118395-A660-4E7C-9836-E0A9416092D0}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
