@@ -6,6 +6,7 @@
 #include "IETThread.h"
 #include "StreamAssetLoader.h"
 #include "IExecutionEvent.h"
+#include "ThreadPoolManager.h"
 
 //a singleton class
 TextureManager* TextureManager::sharedInstance = NULL;
@@ -22,6 +23,10 @@ TextureManager* TextureManager::getInstance() {
 TextureManager::TextureManager()
 {
 	this->countStreamingAssets();
+	// instantiate poolable threads in thread pool manager
+	this->threadPoolManager = new ThreadPoolManager("TextureManagerPool", 4);
+	// start the scheduler of the manager -> run threads
+	this->threadPoolManager->startScheduler();
 }
 
 void TextureManager::loadFromAssetList()
@@ -64,8 +69,8 @@ void TextureManager::loadSingleStreamAsset(int index, IExecutionEvent* execution
 		{
 			String path = entry.path().generic_string();
 			StreamAssetLoader* assetLoader = new StreamAssetLoader(path, executionEvent);
-			assetLoader->start();
-
+			// use thread pool manager to manage tasks/actions for the threads
+			this->threadPoolManager->addTask(assetLoader);
 			break;
 		}
 

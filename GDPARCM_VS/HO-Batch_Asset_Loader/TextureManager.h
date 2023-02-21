@@ -1,7 +1,7 @@
 #pragma once
 #include <unordered_map>
 #include "SFML/Graphics.hpp"
-
+#include "ThreadPoolManager.h"
 class IExecutionEvent;
 class TextureManager
 {
@@ -35,6 +35,8 @@ private:
 
 	const std::string STREAMING_PATH = "Media/Streaming/";
 	int streamingAssetCount = 0;
+
+	ThreadPoolManager* threadPoolManager;
 
 	void countStreamingAssets();
 
